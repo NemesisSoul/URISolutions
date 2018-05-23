@@ -34,7 +34,7 @@ int main(){
 	}
 	
 	//Prints the result.
-	printf("%d\n", res);
+	printf("%lld\n", res);
 	
 }
 
@@ -42,7 +42,7 @@ int main(){
 long long mdc(long long a, long long b){
 	if(b == 0)
 		return a;
-		
+	
 	return mdc(b, a%b);
 }
 
