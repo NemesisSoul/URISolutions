@@ -4,9 +4,10 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
 	double r, vol;
 	cin >> r;
-	vol = (4/3.0)*PI*(pow(r,3));
-	printf("VOLUME = %.3lf\n", vol);
+	vol = (4 / 3.0) * PI * (pow (r, 3));
+	printf ("VOLUME = %.3lf\n", vol);
 }

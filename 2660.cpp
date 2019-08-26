@@ -5,7 +5,8 @@ using namespace std;
 long long mdc(long long a, long long b);
 long long mmc(long long a, long long b);
 
-int main(){
+int main()
+{
 	//Variable Declaration
 	long long n, pop, l, minc = 1, res;
 	
@@ -27,7 +28,8 @@ int main(){
 	for(int i = 2; i <= l; i++)
 	{
 		a = mmc(minc, i);
-		if( a <= l && a > x){
+		if( a <= l && a > x)
+		{
 			res = i;
 			x = a;
 		}
@@ -39,7 +41,8 @@ int main(){
 }
 
 //calcula o mdc entre dois numeros
-long long mdc(long long a, long long b){
+long long mdc(long long a, long long b)
+{
 	if(b == 0)
 		return a;
 	
@@ -47,6 +50,7 @@ long long mdc(long long a, long long b){
 }
 
 //Calculates the Least Common Multiple
-long long mmc(long long a, long long b){
+long long mmc(long long a, long long b)
+{
 	return((a*b)/mdc(a,b));
 }
