@@ -12,5 +12,5 @@ int main(){
 	
 	scanf("%lf\n%lf", &sal, &venda);
 	
-	printf("TOTAL = R$ %.2lf\n", sal+venda*0.15);
+	printf("TOTAL = R$ %.2lf\n", sal + venda * 0.15);
 }
