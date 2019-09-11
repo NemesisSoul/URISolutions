@@ -1,34 +1,42 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <iostream>
 
-int main(void){
-  char cordado[25], filo[25], dieta[25];
-  cin >> cordado >> filo >> dieta;
-  if (!strcmp(cordado, "vertebrado")) {
-    if (!strcmp(filo, "ave")) {
-      if (!strcmp(dieta, "carnivoro"))
-        cout << "aguia";
-      else
-        cout << "pomba";
-    } else {
-      if (!strcmp(dieta, "onivoro"))
-        cout << "humano";
-      else
-        cout << "vaca";
+int main(int argc, char const *argv[])
+{
+    std::string filo, ordem, dieta;
+    std::cin >> filo >> ordem >> dieta;
+
+    std::string animal;
+
+    //Verifica se é invertebrado ou não
+    if (filo == "vertebrado")
+    {
+        if (ordem == "ave")
+        {
+            if (dieta == "carnivoro") animal = "aguia";
+            else if (dieta == "onivoro") animal = "pomba";
+        }
+        else if (ordem == "mamifero")
+        {
+            if (dieta == "herbivoro") animal = "vaca";
+            else if (dieta == "onivoro") animal = "homem";
+        }
     }
-  } else {
-    if (!strcmp(filo, "inseto")) {
-      if (!strcmp(dieta, "hematofago"))
-        cout << "pulga";
-      else
-        cout << "lagarta";
-    } else {
-      if (!strcmp(dieta, "hematofago"))
-        cout << "sanguessuga";
-      else
-        cout << "minhoca";
+    else if (filo == "invertebrado")
+    {
+        if (ordem == "inseto") 
+        {
+            if (dieta == "hematofago") animal = "pulga";
+            else if (dieta == "herbivoro") animal = "lagarta";
+        }
+        else if (ordem == "anelideo")
+        {
+            if (dieta == "hematofago") animal = "sanguessuga";
+            else if (dieta == "onivoro") animal = "minhoca";
+        }
+
     }
-  }
-  cout << '\n';
-  return 0;
+
+    std::cout << animal << std::endl;
+
+    return 0;
 }
